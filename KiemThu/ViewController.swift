@@ -12,12 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let result = addNumber(firstNumber: 1, secondNumber: 2)
+        print("Result = ", result)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func addNumber(firstNumber: Int, secondNumber: Int) -> Int {
+        return firstNumber + secondNumber
     }
 
 
