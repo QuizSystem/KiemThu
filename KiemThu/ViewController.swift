@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tfNgayDiMuon: UITextField!
+    @IBOutlet weak var tfNgayLamBu: UITextField!
+    @IBOutlet weak var tfNgayNghiKhongPhep: UITextField!
+    @IBOutlet weak var tfLuong: UITextField!
 
+    @IBAction func tinhSoTienBiTru(_ sender: Any) {
+        print("Click Button")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let result = addNumber(firstNumber: 1, secondNumber: 2)

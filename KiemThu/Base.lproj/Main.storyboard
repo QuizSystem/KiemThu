@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KiemThu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,123 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-FC-g7w">
+                                <rect key="frame" x="16" y="469" width="343" height="178"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Phân tích giá trị biên
+
+Bài toán: Tính số lương sẽ bị trừ của 1 nhân viên trong 1 tháng.
+
+1 tháng nhân viên phải đi làm trong 22 ngày.
+Lương trả lương cho nhân viên của công ty này từ 5000K tới 30000K
+
+Đi muộn lần 1 trừ 25k
+Đi muộn lần 2 trừ 50k
+Đi muộn lần 3 trừ 75k
+.....
+Đi muộn lần n trừ 25*n(k)
+
+
+Trong 22 ngày đó được phép xin đi làm bù tối đa 5 lần để không bị trừ lương
+Nhưng ngày nghỉ không phép sẽ bị trừ lương ngày hôm đó
+
+
+Số tiền bị trừ trong 1 tháng 
+= (ĐiMuon-LamBu)*25+Lương/22*KhôngPhep
+
+Điều kiện:
+
+0 &lt;= ĐiMuon &lt;= 22
+0 &lt;= LamBu &lt;= 5
+5000 &lt;= Lương &lt;= 30000
+0&lt;= KhongPhep &lt;= 22
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày đi muộn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="900-T4-mzx">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày làm bù" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9d-bg-CAV">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày nghỉ không phép" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dk6-zg-8ms">
+                                <rect key="frame" x="16" y="168" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lương" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-PI-K0c">
+                                <rect key="frame" x="16" y="234" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU1-my-SWP">
+                                <rect key="frame" x="126.5" y="300" width="121" height="30"/>
+                                <state key="normal" title="Tính số tiền bị trừ"/>
+                                <connections>
+                                    <action selector="tinhSoTienBiTru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nes-RP-6f9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-eC-bty">
+                                <rect key="frame" x="100" y="366" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-RZ-jls">
+                                <rect key="frame" x="100" y="412" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.9558402896" green="0.10144796220000001" blue="0.026108646770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93193525075912476" green="0.98063653707504272" blue="0.98081225156784058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kHm-FC-g7w" secondAttribute="bottom" constant="20" id="4PF-ce-f6w"/>
+                            <constraint firstItem="c9d-bg-CAV" firstAttribute="trailing" secondItem="900-T4-mzx" secondAttribute="trailing" id="8Ib-Cb-lhl"/>
+                            <constraint firstItem="dk6-zg-8ms" firstAttribute="top" secondItem="c9d-bg-CAV" secondAttribute="bottom" constant="36" id="Eve-4h-io8"/>
+                            <constraint firstItem="DTh-PI-K0c" firstAttribute="top" secondItem="dk6-zg-8ms" secondAttribute="bottom" constant="36" id="JKT-I7-z9a"/>
+                            <constraint firstItem="900-T4-mzx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="KqZ-xN-6Tp"/>
+                            <constraint firstItem="pBx-RZ-jls" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="Pcg-QL-CVW"/>
+                            <constraint firstItem="mU1-my-SWP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QBx-lH-Am3"/>
+                            <constraint firstAttribute="trailing" secondItem="pBx-RZ-jls" secondAttribute="trailing" constant="100" id="U1M-DR-0iA"/>
+                            <constraint firstItem="kHm-FC-g7w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VFJ-2F-Baw"/>
+                            <constraint firstItem="dk6-zg-8ms" firstAttribute="leading" secondItem="900-T4-mzx" secondAttribute="leading" id="dYC-tY-qeK"/>
+                            <constraint firstItem="DTh-PI-K0c" firstAttribute="leading" secondItem="900-T4-mzx" secondAttribute="leading" id="eZS-In-9dd"/>
+                            <constraint firstAttribute="trailing" secondItem="900-T4-mzx" secondAttribute="trailing" constant="16" id="fmK-Nv-QEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="kHm-FC-g7w" secondAttribute="trailing" constant="16" id="gMo-E4-NB1"/>
+                            <constraint firstItem="mU1-my-SWP" firstAttribute="top" secondItem="DTh-PI-K0c" secondAttribute="bottom" constant="36" id="ha1-hQ-AOR"/>
+                            <constraint firstItem="DTh-PI-K0c" firstAttribute="trailing" secondItem="900-T4-mzx" secondAttribute="trailing" id="ldV-Do-Ms3"/>
+                            <constraint firstItem="900-T4-mzx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="mbt-cg-O1I"/>
+                            <constraint firstAttribute="trailing" secondItem="JBr-eC-bty" secondAttribute="trailing" constant="100" id="n3V-vv-FOP"/>
+                            <constraint firstItem="pBx-RZ-jls" firstAttribute="top" secondItem="JBr-eC-bty" secondAttribute="bottom" constant="25" id="nj0-lD-QhR"/>
+                            <constraint firstItem="kHm-FC-g7w" firstAttribute="top" secondItem="pBx-RZ-jls" secondAttribute="bottom" constant="36" id="qJs-tR-dUL"/>
+                            <constraint firstItem="JBr-eC-bty" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="rf6-eZ-EAW"/>
+                            <constraint firstItem="JBr-eC-bty" firstAttribute="top" secondItem="mU1-my-SWP" secondAttribute="bottom" constant="36" id="twv-rd-8Ty"/>
+                            <constraint firstItem="c9d-bg-CAV" firstAttribute="top" secondItem="900-T4-mzx" secondAttribute="bottom" constant="36" id="unT-q5-jil"/>
+                            <constraint firstItem="c9d-bg-CAV" firstAttribute="leading" secondItem="900-T4-mzx" secondAttribute="leading" id="wjf-Bb-qwV"/>
+                            <constraint firstItem="dk6-zg-8ms" firstAttribute="trailing" secondItem="900-T4-mzx" secondAttribute="trailing" id="zoj-od-lUf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfLuong" destination="DTh-PI-K0c" id="6TJ-cL-tHA"/>
+                        <outlet property="tfNgayDiMuon" destination="900-T4-mzx" id="Od0-LJ-jUe"/>
+                        <outlet property="tfNgayLamBu" destination="c9d-bg-CAV" id="KCT-qz-M9L"/>
+                        <outlet property="tfNgayNghiKhongPhep" destination="dk6-zg-8ms" id="TnD-Af-F5W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="93.103448275862078"/>
         </scene>
     </scenes>
 </document>
