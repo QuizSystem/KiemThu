@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F830554F1E672E8E00604082 /* KiemThuBienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830554E1E672E8E00604082 /* KiemThuBienViewController.swift */; };
 		F892E1721E65EC660021A5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892E1711E65EC660021A5F8 /* AppDelegate.swift */; };
 		F892E1741E65EC660021A5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892E1731E65EC660021A5F8 /* ViewController.swift */; };
 		F892E1771E65EC660021A5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F892E1751E65EC660021A5F8 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F830554E1E672E8E00604082 /* KiemThuBienViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiemThuBienViewController.swift; sourceTree = "<group>"; };
 		F892E16E1E65EC660021A5F8 /* KiemThu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiemThu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F892E1711E65EC660021A5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F892E1731E65EC660021A5F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				F892E1781E65EC660021A5F8 /* Assets.xcassets */,
 				F892E17A1E65EC660021A5F8 /* LaunchScreen.storyboard */,
 				F892E17D1E65EC660021A5F8 /* Info.plist */,
+				F830554E1E672E8E00604082 /* KiemThuBienViewController.swift */,
 			);
 			path = KiemThu;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F892E1741E65EC660021A5F8 /* ViewController.swift in Sources */,
+				F830554F1E672E8E00604082 /* KiemThuBienViewController.swift in Sources */,
 				F892E1721E65EC660021A5F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +414,7 @@
 				F892E18D1E65EC660021A5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F892E18E1E65EC660021A5F8 /* Build configuration list for PBXNativeTarget "KiemThuTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				F892E1901E65EC660021A5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3kd-BD-wdt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-FC-g7w">
                                 <rect key="frame" x="16" y="469" width="343" height="178"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Phân tích giá trị biên
+                                <string key="text">Phân tích giá trị biên
 
 Bài toán: Tính số lương sẽ bị trừ của 1 nhân viên trong 1 tháng.
 
@@ -51,7 +51,7 @@ Số tiền bị trừ trong 1 tháng
 0 &lt;= LamBu &lt;= 5
 5000 &lt;= Lương &lt;= 30000
 0&lt;= KhongPhep &lt;= 22
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -80,7 +80,7 @@ Số tiền bị trừ trong 1 tháng
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU1-my-SWP">
-                                <rect key="frame" x="126.5" y="300" width="121" height="30"/>
+                                <rect key="frame" x="127" y="300" width="121" height="30"/>
                                 <state key="normal" title="Tính số tiền bị trừ"/>
                                 <connections>
                                     <action selector="tinhSoTienBiTru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nes-RP-6f9"/>
@@ -101,7 +101,7 @@ Số tiền bị trừ trong 1 tháng
                         </subviews>
                         <color key="backgroundColor" red="0.93193525075912476" green="0.98063653707504272" blue="0.98081225156784058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kHm-FC-g7w" secondAttribute="bottom" constant="20" id="4PF-ce-f6w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kHm-FC-g7w" secondAttribute="bottom" priority="999" constant="20" id="4PF-ce-f6w"/>
                             <constraint firstItem="c9d-bg-CAV" firstAttribute="trailing" secondItem="900-T4-mzx" secondAttribute="trailing" id="8Ib-Cb-lhl"/>
                             <constraint firstItem="dk6-zg-8ms" firstAttribute="top" secondItem="c9d-bg-CAV" secondAttribute="bottom" constant="36" id="Eve-4h-io8"/>
                             <constraint firstItem="DTh-PI-K0c" firstAttribute="top" secondItem="dk6-zg-8ms" secondAttribute="bottom" constant="36" id="JKT-I7-z9a"/>
@@ -135,6 +135,116 @@ Số tiền bị trừ trong 1 tháng
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="93.103448275862078"/>
+        </scene>
+        <!--Kiem Thu Bien View Controller-->
+        <scene sceneID="wKN-ZW-cq3">
+            <objects>
+                <viewController id="3kd-BD-wdt" customClass="KiemThuBienViewController" customModule="KiemThu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DP3-0j-mgS"/>
+                        <viewControllerLayoutGuide type="bottom" id="F3k-uU-8pW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qqz-CV-ZHR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-Uf-8Iy">
+                                <rect key="frame" x="16" y="361" width="343" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Phân tích giá trị biên
+
+Bài toán: Tính số lương sẽ bị trừ của 1 nhân viên trong 1 tháng.
+
+1 tháng nhân viên phải đi làm trong 22 ngày.
+Lương trả lương cho nhân viên của công ty này từ 5000K tới 30000K
+
+Đi muộn lần 1 trừ 25k
+Đi muộn lần 2 trừ 50k
+Đi muộn lần 3 trừ 75k
+.....
+Đi muộn lần n trừ 25*n(k)
+
+
+Trong 22 ngày đó được phép xin đi làm bù tối đa 5 lần để không bị trừ lương
+Nhưng ngày nghỉ không phép sẽ bị trừ lương ngày hôm đó
+
+
+Số tiền bị trừ trong 1 tháng 
+= (ĐiMuon-LamBu)*25+Lương/22*KhôngPhep
+
+Điều kiện:
+
+0 &lt;= ĐiMuon &lt;= 22
+0 &lt;= LamBu &lt;= 5
+5000 &lt;= Lương &lt;= 30000
+0&lt;= KhongPhep &lt;= 22
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày đi muộn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-Wk-SJ5">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày làm bù" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swl-UH-3PF">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sch-Jx-0Mf">
+                                <rect key="frame" x="127" y="192" width="121" height="30"/>
+                                <state key="normal" title="Tính số tiền bị trừ"/>
+                                <connections>
+                                    <action selector="tinhSoTienBiTru:" destination="3kd-BD-wdt" eventType="touchUpInside" id="wMs-Ro-Dyf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kết quả" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw0-Mo-G4g">
+                                <rect key="frame" x="100" y="258" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aik-HE-pl9">
+                                <rect key="frame" x="100" y="304" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.9558402896" green="0.10144796220000001" blue="0.026108646770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93193525079999995" green="0.98063653709999998" blue="0.98081225159999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F3k-uU-8pW" firstAttribute="top" secondItem="g1V-Uf-8Iy" secondAttribute="bottom" priority="999" constant="20" id="0dr-Dh-iCC"/>
+                            <constraint firstItem="swl-UH-3PF" firstAttribute="top" secondItem="UMV-Wk-SJ5" secondAttribute="bottom" constant="36" id="3Cd-76-UqT"/>
+                            <constraint firstItem="Sch-Jx-0Mf" firstAttribute="centerX" secondItem="qqz-CV-ZHR" secondAttribute="centerX" id="43S-BH-2hd"/>
+                            <constraint firstItem="aik-HE-pl9" firstAttribute="top" secondItem="cw0-Mo-G4g" secondAttribute="bottom" constant="25" id="4Ct-OB-Z3d"/>
+                            <constraint firstItem="g1V-Uf-8Iy" firstAttribute="top" secondItem="aik-HE-pl9" secondAttribute="bottom" constant="36" id="Cx6-tm-AED"/>
+                            <constraint firstAttribute="trailing" secondItem="aik-HE-pl9" secondAttribute="trailing" constant="100" id="HZK-Tt-3ha"/>
+                            <constraint firstItem="Sch-Jx-0Mf" firstAttribute="top" secondItem="swl-UH-3PF" secondAttribute="bottom" constant="60" id="HcV-oY-2RF"/>
+                            <constraint firstAttribute="trailing" secondItem="UMV-Wk-SJ5" secondAttribute="trailing" constant="16" id="Mq9-5N-9BH"/>
+                            <constraint firstItem="UMV-Wk-SJ5" firstAttribute="leading" secondItem="qqz-CV-ZHR" secondAttribute="leading" constant="16" id="NbA-Yx-XAz"/>
+                            <constraint firstItem="UMV-Wk-SJ5" firstAttribute="top" secondItem="qqz-CV-ZHR" secondAttribute="top" constant="36" id="YDc-vh-tZ9"/>
+                            <constraint firstItem="g1V-Uf-8Iy" firstAttribute="leading" secondItem="qqz-CV-ZHR" secondAttribute="leading" constant="16" id="aJv-bx-ZVG"/>
+                            <constraint firstAttribute="trailing" secondItem="cw0-Mo-G4g" secondAttribute="trailing" constant="100" id="aWt-ok-gvb"/>
+                            <constraint firstItem="cw0-Mo-G4g" firstAttribute="top" secondItem="Sch-Jx-0Mf" secondAttribute="bottom" constant="36" id="fKU-Ir-5Qd"/>
+                            <constraint firstItem="cw0-Mo-G4g" firstAttribute="leading" secondItem="qqz-CV-ZHR" secondAttribute="leading" constant="100" id="nRL-Zx-1uw"/>
+                            <constraint firstItem="swl-UH-3PF" firstAttribute="trailing" secondItem="UMV-Wk-SJ5" secondAttribute="trailing" id="qSi-Mn-VF4"/>
+                            <constraint firstItem="swl-UH-3PF" firstAttribute="leading" secondItem="UMV-Wk-SJ5" secondAttribute="leading" id="rJu-Il-bV2"/>
+                            <constraint firstAttribute="trailing" secondItem="g1V-Uf-8Iy" secondAttribute="trailing" constant="16" id="sXe-Z7-Vri"/>
+                            <constraint firstItem="aik-HE-pl9" firstAttribute="leading" secondItem="qqz-CV-ZHR" secondAttribute="leading" constant="100" id="xoa-Cp-icn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbKetQua" destination="aik-HE-pl9" id="QGJ-A1-Hxm"/>
+                        <outlet property="tfNgayDiMuon" destination="UMV-Wk-SJ5" id="ZBB-DH-sRk"/>
+                        <outlet property="tfNgayLamBu" destination="swl-UH-3PF" id="OEt-z7-oK3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cf4-oF-EaM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="93.103448275862078"/>
         </scene>
