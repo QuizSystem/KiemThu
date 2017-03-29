@@ -24,15 +24,27 @@ class ViewController: UIViewController {
         let result = addNumber(firstNumber: 1, secondNumber: 2)
         print("Result = ", result)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func addNumber(firstNumber: Int, secondNumber: Int) -> Int {
         return firstNumber + secondNumber
     }
+    
+    func tinhSoTienBiTru(muon: Int, bu: Int, khongPhep: Int) -> CGFloat {
+        return 0
+    }
 
+    func kiemTraHopLe(muon: Int, bu: Int, khongPhep: Int) -> Bool {
+        if (bu < 0 || bu > 5) {
+            return false
+        }
+        if (muon < 0 || muon > 23) {
+            return false
+        }
+        if (khongPhep < 0 || khongPhep > 23) {
+            return false
+        }
+        return muon + khongPhep > 23
+    }
 
 }
 
